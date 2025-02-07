@@ -1,0 +1,2 @@
+# disney_reservation_notificator
+予約キャンセルを検知しdiscordに通知

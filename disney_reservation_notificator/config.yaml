@@ -2,8 +2,8 @@ config:
   reservation:
     hotel:
       metadata:
-        useDate: "20250610"
-        adultNum: 2
+        use_date: "20250610"
+        adult_num: 2
       hotels:
         - hotel_id: "100"
           logical_name: "東京ディズニーシー・ファンタジースプリングスホテル"

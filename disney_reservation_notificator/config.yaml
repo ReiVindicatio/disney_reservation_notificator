@@ -1,0 +1,127 @@
+config:
+  reservation:
+    hotel:
+      metadata:
+        useDate: "20250610"
+        adultNum: 2
+      hotels:
+        - hotel_id: "100"
+          logical_name: "東京ディズニーシー・ファンタジースプリングスホテル"
+          is_monitored: true
+          rooms:
+            - room_id: "101"
+              logical_name: "【ファンタジーシャトー】ベイサイドエリア"
+              is_monitored: true
+            - room_id: "102"
+              logical_name: "【ファンタジーシャトー】ホテルエントランスサイド"
+              is_monitored: true
+            - room_id: "103"
+              logical_name: "【ファンタジーシャトー】ローズコードサイド"
+              is_monitored: true
+            - room_id: "104"
+              logical_name: "【ファンタジーシャトー】スプリングスサイド"
+              is_monitored: true
+            - room_id: "105"
+              logical_name: "【ファンタジーシャトー】ベイサイドエリア"
+              is_monitored: true
+        - hotel_id: "200"
+          logical_name: "東京ディズニーランドホテル"
+          is_monitored: true
+          rooms:
+            - room_id: "201"
+              logical_name: "スーペリアルーム"
+              is_monitored: true
+            - room_id: "202"
+              logical_name: "スーペリアアルコーヴルーム"
+              is_monitored: true
+            - room_id: "203"
+              logical_name: "キャラクター"
+              is_monitored: true
+            - room_id: "204"
+              logical_name: "デラックスルーム・コーナールーム"
+              is_monitored: true
+            - room_id: "205"
+              logical_name: "ファミリールーム"
+              is_monitored: true
+            - room_id: "206"
+              logical_name: "コンシェルジュ"
+              is_monitored: true
+            - room_id: "207"
+              logical_name: "スイート"
+              is_monitored: true
+        - hotel_id: "300"
+          logical_name: "ディズニーアンバサダーホテル"
+          is_monitored: true
+          rooms:
+            - room_id: "301"
+              logical_name: "外壁工事対象客室"
+              is_monitored: true
+            - room_id: "302"
+              logical_name: "ディズニーアンバサダーホテル・スペシャルステイ"
+              is_monitored: true
+            - room_id: "303"
+              logical_name: "スタンダードルーム"
+              is_monitored: true
+            - room_id: "304"
+              logical_name: "スーペリアルーム"
+              is_monitored: true
+            - room_id: "305"
+              logical_name: "キャラクタールーム"
+              is_monitored: true
+            - room_id: "306"
+              logical_name: "トリプルルーム・デラックスルーム・パームガーデンビュールーム"
+              is_monitored: true
+            - room_id: "307"
+              logical_name: "ファミリールーム"
+              is_monitored: true
+            - room_id: "308"
+              logical_name: "ミッキーズ・プレミアルーム/ディズニーファンタジアルーム"
+              is_monitored: true
+            - room_id: "309"
+              logical_name: "スイートルーム"
+              is_monitored: true
+        - hotel_id: "400"
+          logical_name: "東京ディズニーシー・ホテルミラコスタ"
+          is_monitored: true
+          rooms:
+            - room_id: "401"
+              logical_name: "トスカーナ・サイド"
+              is_monitored: true
+            - room_id: "402"
+              logical_name: "ヴェネチア・サイド"
+              is_monitored: true
+            - room_id: "403"
+              logical_name: "ポルト・パラディーゾ・サイド"
+              is_monitored: true
+            - room_id: "404"
+              logical_name: "スペチアーレルーム＆スイート"
+              is_monitored: true
+        - hotel_id: "500"
+          logical_name: "東京ディズニーリゾート・トイ・ストーリーホテル"
+          is_monitored: true
+          rooms:
+            - room_id: "501"
+              logical_name: "【パーシャルビュー】スタンダードルーム"
+              is_monitored: true
+            - room_id: "502"
+              logical_name: "スタンダードルーム/スーペリアルーム"
+              is_monitored: true
+            - room_id: "503"
+              logical_name: "【ベイビュー】スタンダードルーム"
+              is_monitored: true
+            - room_id: "504"
+              logical_name: "【スクエアビュー】スタンダードルーム/スーペリアルーム"
+              is_monitored: true
+        - hotel_id: "600"
+          logical_name: "東京ディズニーセレブレーションホテル"
+          is_monitored: true
+          rooms:
+            - room_id: "601"
+              logical_name: "期間限定ルーム"
+              is_monitored: true
+            - room_id: "602"
+              logical_name: "ディスカバー"
+              is_monitored: true
+            - room_id: "603"
+              logical_name: "ウィッシュ"
+              is_monitored: true

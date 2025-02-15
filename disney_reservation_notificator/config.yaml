@@ -22,7 +22,7 @@ config:
               logical_name: "【ファンタジーシャトー】スプリングスサイド"
               is_monitored: true
             - room_id: "105"
-              logical_name: "【ファンタジーシャトー】ベイサイドエリア"
+              logical_name: "【グランドシャトー】"
               is_monitored: true
         - hotel_id: "200"
           logical_name: "東京ディズニーランドホテル"

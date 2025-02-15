@@ -1,6 +1,8 @@
 from pydantic import BaseModel
 from selenium import webdriver
+from selenium.webdriver.chrome.options import Options
 from bs4 import BeautifulSoup
+from time import sleep
 from disney_reservation_notificator.service.base.reservation_handler import ReservationHandler
 
 
@@ -29,24 +31,38 @@ class HotelReservationHandler(ReservationHandler):
         return super().model_post_init(__context)
 
     def retrieve_reservation_info(self) -> dict:
-        # html: str = self._retrieve_html()
-        with open('resources/test.html', 'r') as f:
-            html = f.read()
+        html: str = self._retrieve_html()
+        # with open('resources/test.html', 'r') as f:
+        #     html = f.read()
         hotel_info = self._parse_hotel_info(html)
-        res = {'url': self.base_url, 'rooms': []}
+        print(hotel_info)
+        res = {'url': self.base_url, 'hotels': []}
         for hotel in self.hotels:
             if not hotel.is_monitored:
                 continue
+            hotel_dict = {"name": hotel.logical_name, "rooms": []}
             for room in hotel.rooms:
                 if not room.is_monitored:
                     continue
                 if hotel_info[hotel.hotel_id][room.room_id]:
-                    res['rooms'].append(hotel.logical_name + " " + room.logical_name)
+                    print(room.room_id + " " + room.logical_name + " is vacancy")
+                    hotel_dict['rooms'].append(room.logical_name)
+            if hotel_dict['rooms']:
+                res['hotels'].append(hotel_dict)
+                    
         return res
     
     def _retrieve_html(self) -> str:
-        driver = webdriver.Chrome()
+        options = Options()
+        options.add_argument("--disable-blink-features=AutomationControlled")
+        options.add_argument('--no-sandbox')
+        options.add_argument("user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36")
+        driver = webdriver.Chrome(options=options)
+        driver.implicitly_wait(30)
         driver.get(self.base_url)
+        sleep(10)
+        driver.refresh()
+        sleep(30)
         return driver.page_source
     
     def _parse_hotel_info(self, html: str) -> dict:
